@@ -1,2 +1,2 @@
-# OS-Experiment-in-HDU
-Some useful code for HDU OS experiment
+# 杭电OS实验代码（已通过验收）
+主要是一些在进行学校操作系统课程时编写的一些代码，里边的代码可以通过验收，但不一定保证复现效果（取决于终端的Linux版本）， 需要的自取^_^
