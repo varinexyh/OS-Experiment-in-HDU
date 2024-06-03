@@ -2,9 +2,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+//Importing the libs
 int main()
 {
+    //Loading the file system first.
     my_loadsys();
+    //Set two char arrays to store the command and operation objects.
     char command[MAX_PATH];
     char arg[MAX_PATH];
     while(1)
@@ -55,9 +58,9 @@ int main()
          }
          else if (strcmp("my_write", command) == 0)
          {
-            getchar();
+            getchar(); //Offset single character.
             fgets(arg, MAX_PATH, stdin);
-            arg[strcspn(arg, "\n")] = 0;
+            arg[strcspn(arg, "\n")] = 0; //Removing the another line characters.
             my_write(arg);
          }
          else if (strcmp("my_read", command) == 0)
@@ -71,6 +74,7 @@ int main()
          }
          else
          {
+             //Robustness operations.
             printf("Unknown command.\n");
          }
     }
